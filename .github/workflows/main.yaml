@@ -1,0 +1,13 @@
+on: [push]
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say user
+    steps:
+      - run: echo "Yo"
+        shell: bash
+      - run: echo "Name is ${{ github.event.pusher.name }}"
+        shell: bash
+      - run: echo "Email is ${{ github.event.pusher.email }}"
+        shell: bash
+
