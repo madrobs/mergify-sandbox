@@ -10,4 +10,8 @@ jobs:
         shell: bash
       - run: echo "Email is ${{ github.event.pusher.email }}"
         shell: bash
+      - run: echo "Sender login is ${{ github.event.sender.login }}"
+        shell: bash
+      - run: echo "Sender is is ${{ github.event.sender.id }}"
+        shell: bash
 
